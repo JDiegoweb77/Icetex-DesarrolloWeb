@@ -1,14 +1,32 @@
 *{
-    margin:0;
-    padding:0;
-    text-decoration: none;
-    list-style: none;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #e5e5f7;
+    background-image:  radial-gradient(#191919 0.2px, transparent 0.2px), radial-gradient(#191919 0.2px, #d5e2d6 0.2px);
+    background-size: 8px 8px;
+    background-position: 0 0,4px 4px;
+    display: inline-block;
+    color: black;
+    width: 100%;
+    height: 100%;
+
 }
 
 nav {
     background-color: black;
-}
+    display: flex;
+    z-index: 20;
+    font-weight: 100%;
+ }
+
+ .container-fluid {
+    display: none;
+ }
 
 #logo {
     color: white;
@@ -16,8 +34,9 @@ nav {
     font-size: 40px;
     font-style: italic;
 }
+
 .navbar ul li a {
-    background-color: rgb(194, 248, 112);
+    background-color: rgb(120, 156, 67);
     font-weight: 400;
     font-size: 14px;
     padding: 10px 10px;
@@ -26,109 +45,106 @@ nav {
     text-decoration: none;
 }
 
-.navbar li a.active, li a:hover {
-    background-color: greenyellow;
-    transition: 3s;
+.navbar li a:hover {
+    background-color: rgb(79, 214, 25);
+    transition: 1.5s;
     opacity: 75%;
 }
 
-.btn-search:hover {
-    background-color: greenyellow;
-    transition: 3s;
-    opacity: 75%;
+.navbar ul {
+    background-color: black;
+
 }
 
-.d-flex {
-    width: 400px;
-    height: 40px;
-}
-.d-flex .btn-search {
+form .btn-search {
     border-radius: 5px;
 }
 .btn-search:hover {
-    background-color: greenyellow;
-    transition: 3s;
+    background-color: rgb(120, 156, 67);
+    transition: 1s;
     opacity: 75%;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    background-color: gainsboro;
-    font-family: sans-serif;
-    height: 100vh;
-  }
-
-  .login-box {
-    width: 350px;
-    height: 630px;
-    background-color: black;
-    color: #fff;
-    top: 85%;
-    left:50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    box-sizing: border-box;
-    padding: 70px 30px;
-  }
-
-  .login-box h1 {
-    margin: 0;
-    padding: 0 0 20px;
+.form {
+    background-color: #000;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 90%;
+    max-width: 400px;
+    padding: 4.5em 3em;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px rgb(0 , 0, 0 / 30%);
     text-align: center;
-    font-size: 22px;
-  }
+}
 
-  .login-box label {
-    margin: 0;
-    padding: 0;
-    font-weight: bold;
-    display: block;
-  }
+.form__title {
+    font-size: 2rem;
+    margin-bottom: .5em;
+    color: #fff;
+}
 
-  .login-box input {
+.form__paragraph {
+    font-weight: 300;
+    color: #fff;
+}
+
+.form__link {
+    font-weight: 400;
+}
+
+.form-container {
+    margin-top: 3em;
+    display: grid;
+    gap: 2.5em;
+}
+
+.form__group {
+    position: relative;
+    color: #7c7373;
+}
+
+.form__input {
     width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .login-box input[type="text"],
-  .login-box input[type="email"],
-  .login-box input[type="password"] {
-    border: none;
-    border-bottom: 1px solid #fff;
-    background: transparent;
-    outline: none;
-    height: 40px;
-    color: #fff;
-    font-size: 16px;
-  }
-
-  .login-box input[type="submit"] {
+    background: none;
+    color: #7c7373;
+    font-size: 1rem;
+    padding: .6em .3em;
     border: none;
     outline: none;
+    border-bottom: 1px solid #7c7373;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.form__label {
+    color: #7c7373;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 5px;
+}
+
+.form__submit {
+    background: green;
+    width: 65%;
+    border-radius: 10px;
     height: 40px;
-    background: greenyellow;
-    font-weight: bold;
-    color: #fff;
-    font-size: 18px;
-    border-radius: 20px;
-  }
+}
 
-  .login-box a {
-    text-decoration: none;
-    font-size: 15px;
-    line-height: 20px;
-    color: darkgray;
-  }
-
-  .login-box a:hover {
-    color: #fff;
-  }
+.warning {
+    width: 500px;
+    text-align: center;
+    margin: auto;
+    color: red;
+    padding-top: 20px;
+}
 
 footer {
     background-color: black;
-    
+    list-style: none;
 }
+
 .footer h2 {
     color: #fff;
     align-items: center;
@@ -143,12 +159,17 @@ footer {
 
 }
 .footer a:hover {
-    background-color: greenyellow;
-    transition: 0.5s;
-    padding: 4px 8px;
-    opacity: 90%;
+    color: greenyellow;
 }
 
+.footer h3 {
+    color: #fff;
+}
+.footer .reserved {
+ text-align: center;
+ justify-content: center;
+ color: #fff;   
+}
 .footer h3 {
     color: #fff;
 }
@@ -166,6 +187,8 @@ footer {
 .footer .early {
     text-align: center;
 }
+
 .footer div {
     text-align: center;
 }
+

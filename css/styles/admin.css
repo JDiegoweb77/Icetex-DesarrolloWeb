@@ -57,13 +57,14 @@
     background-color: greenyellow;
     border-radius: 10px;
     opacity: 85%;
-    transition: 3s;
+    transition: 1.5s;
 }
 
 .side-bar-left ul li a i {
     display: inline-block;
     padding: 10px;
     cursor: pointer;
+    padding-left: 10px;
 }
 
 .dev-name {
