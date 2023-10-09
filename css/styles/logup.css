@@ -12,8 +12,9 @@ body {
     background-position: 0 0,4px 4px;
     display: inline-block;
     color: black;
-    width: 100%;
-    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
 }
 
@@ -65,12 +66,13 @@ form .btn-search {
     opacity: 75%;
 }
 
-.form {
+.formulario {
     background-color: #000;
     margin: auto;
     margin-top: 10px;
     margin-bottom: 10px;
-    width: 90%;
+    width: 70%;
+    height: 40%;
     max-width: 400px;
     padding: 4.5em 3em;
     border-radius: 10px;
@@ -141,8 +143,9 @@ form .btn-search {
 }
 
 footer {
-    background-color: black;
+    background-color: #fff;
     list-style: none;
+    display: inline-block;
 }
 
 .footer h2 {

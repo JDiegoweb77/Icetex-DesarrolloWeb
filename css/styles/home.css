@@ -17,10 +17,11 @@ body {
     background-position: 0 0,4px 4px;
     display: inline-block;
     color: black;
-    width: 100%;
-    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
-#items img {
+#shopItems img {
     width: 250px;
     height: 250px;
     align-items: center;
@@ -28,7 +29,7 @@ body {
     object-fit: cover;
 }
 
-#items div {
+#shopItems div {
     width: 300px;
     border: 1px solid black;
     align-items: center;
@@ -38,16 +39,24 @@ body {
     border-radius: 5px;
 }
 
-#items p {
+#vercarrito {
+    color: #fff;
+}
+
+#shopItems p {
     text-align: center;
     font-weight: 500;
     font-style: italic;
 }
 
-#items button {
-    margin-left: 110px;
+.Add-cart {
+    margin-left: 50px;
     margin-bottom: 20px;
     border-radius: 5px;
+    width: 200px;
+    height: 40px;
+    color: #000;
+    background: rgb(32, 145, 75);
 }
 
 nav {
@@ -61,26 +70,24 @@ nav {
 .modal-container {
     background: #fff;
     align-items: center;
-    width: 40%;
-    z-index: 80;
-    scrollbar-color: none;
+    position: fixed;
+    right: 0;
+    border-radius: 3px solid blue;
+    width: 300px;
+    height: 100%;
+    top: 0;
 
 }
- /*.modal-container {
-   width: 80px;
-    margin: 0 10%;
-    color: #fff;
-    background-color: black;
-    display: flex;
+ .modal-container {
+    margin-right: 0;
+    background-color: #fff;
     flex-direction: column;
     align-items: center;
-   top styles
     position: fixed;
-    z-index: 80;
     scrollbar-color: none;
 }
 
-/*.modal-container::-webkit-scrollbar {
+.modal-container::-webkit-scrollbar {
     display: none;
 }
 
@@ -101,13 +108,11 @@ nav {
     flex-direction: none;
     justify-content: space-around;
     align-items: center;
-    width: 70%;
     margin: 10px;
 }
 
 .modal-container > div > img {
-    height: 120px;
-    width: 120px;
+    
 }
 
 .total-content {
@@ -115,7 +120,7 @@ nav {
     padding: 20px;
     text-align: center;
     padding-top: 20px;
-}*/
+}
 
 
 
@@ -152,40 +157,46 @@ nav {
 
 }
 
-form {
-    width: 400px;
-    height: 40px;
+[name="coursesearched"] {
+    border: 4px solid green;
 }
-form .btn-search {
-    border-radius: 5px;
-}
+
 .btn-search:hover {
     background-color: greenyellow;
     transition: 3s;
     opacity: 75%;
 }
-body {
-    align-items: center;
-    display: inline-block;
-}
+
 
 .title1 {
     margin-bottom: 40px;
-    font-size: 40px;
-    color: #fff;
-    font-weight: 600;
+    font-size: 30px;
+    color: #000;
+    font-weight: 400;
     text-align: center;
     font-style: italic;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding-top: 30px;
     padding-bottom: 20px;
-    background: #000;
+    background: #dfd9d9;
 }
 
 .title2 {
     text-align: center;
     font-style: italic;
     padding-top: 0px;
+}
+
+.shopping-cart {
+    display: flex;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    border: 2px solid blue;
+}
+
+.cart-title {
+    border-bottom: 1px solid black;
 }
 
 .warnings {
