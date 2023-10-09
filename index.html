@@ -10,8 +10,31 @@
     <title>LuxuWatch | Luxury Watch Store</title>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
+      <header>
+          <nav class="nav">
+              <div>
+                  <h1>LuxuWatch</h1>
+              </div>
+              <ul class="nav__ul">
+                  <div class="search">
+                      <input type="search">
+                      <i class="bi bi-search"></i>
+                      <input type="submit" value="Search" placeholder="What are you looking for?">
+                  </div>
+                  <li class="nav__li"><a href="#">Shop</a>
+                      <ul class="nav__ul menu-vertical">
+                          <li class="nav__li"><a href="#">Classic Watches</a></li class="nav__li">
+                          <li class="nav__li"><a href="#">Digital Watches</a></li>
+                          <li class="nav__li"><a href="#">Accesories</a></li>
+                      </ul>
+                  </li>
+                  <li class="nav__li"><a href="login.html">Login/Register<i class="bi bi-person"></i></a></li>
+                  <li class="nav__li"><a href="#">Help center</a></li>
+                  <li class="nav__li"><h2 class="ver-carrito" id="vercarrito">🛒<span id="cartQuanty" class="cart-quanty"></span></h2></li>
+              </ul>
+          </ul>
+
+        <!--<nav class="navbar">
             <div class="container-fluid">
               <a id="logo" href="#">LuxuWatch</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,29 +64,30 @@
                   </li>
                 </ul>                
               </div>
-            </div>
+            </div>-->
           </nav>
     </header>
 
     <main>
-      <section>
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="assets/wallpaper6.jpeg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="assets/wallpaper7.jpeg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="assets/wallpaper8.jpeg" class="d-block w-100" alt="...">
+        <h2 class="title3">Welcome to LuxuWatch Store</h2>
+        
+        <section>
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/wallpaper6.jpeg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/wallpaper7.jpeg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/wallpaper8.jpeg" class="d-block w-100" alt="...">
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section class="content">
-        <h2 class="title3">Welcome to LuxuWatch Store</h2>
+        </section>
+        
+    <section class="content">
         <p>Luxury watches are a source of fascination for people around the globe. But what qualifies as a luxury watch? Some may say it's any watch made of expensive materials such as gold or platinum. Others could argue that it has to be a mechanical watch with a handmade movement. Then there are those who define luxury based on legendary brands such as Rolex, Patek Philippe, and Breitling. <br>
         Whatever it is you're looking for, you will find luxury watches from all the famous brands in every price range on Chrono24. Find and purchase your dream watch now.
         </p>

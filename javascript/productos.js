@@ -5,6 +5,7 @@ let shopProducts = [
         name: "Smartwatch Ctvrtek",
         price: "100.00$",
         descripcion: "",
+        cantidad: 1,
     },
     {
         id: 2,
@@ -12,6 +13,7 @@ let shopProducts = [
         name: "Smartwatch Dark Black",
         price: "150.00$",
         descripcion: "",
+        cantidad: 1,
     },
     {
         id: 3,
@@ -19,6 +21,7 @@ let shopProducts = [
         name: "Mini Smartwatch Black",
         price: "78.00$",
         descripcion: "",
+        cantidad: 1,
     },
     {
         id: 4,
@@ -26,6 +29,7 @@ let shopProducts = [
         name: "Purple Smartwatch",
         price: "180.00$",
         descripcion: "",
+        cantidad: 1,
     },
     {
         id: 5,
@@ -33,5 +37,6 @@ let shopProducts = [
         name: "Classic IWC brown",
         price: "200.00$",
         descripcion: "",
+        cantidad: 1,
     },
 ];

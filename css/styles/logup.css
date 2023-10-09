@@ -10,12 +10,6 @@ body {
     background-image:  radial-gradient(#191919 0.2px, transparent 0.2px), radial-gradient(#191919 0.2px, #d5e2d6 0.2px);
     background-size: 8px 8px;
     background-position: 0 0,4px 4px;
-    display: inline-block;
-    color: black;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
 }
 
 nav {
@@ -134,12 +128,13 @@ form .btn-search {
     height: 40px;
 }
 
-.warning {
+.warnings {
     width: 500px;
     text-align: center;
     margin: auto;
     color: red;
     padding-top: 20px;
+    padding-right: 200px;
 }
 
 footer {

@@ -14,16 +14,44 @@
 </head>
 <body>
     <header>
-        <nav class="navbar">
+        <nav class="nav">
+            <div>
+                <h1>LuxuWatch</h1>
+            </div>
+            <ul class="nav__ul">
+                <div class="search">
+                    <input type="search">
+                    <i class="bi bi-search"></i>
+                    <input type="submit" value="Search" placeholder="What are you looking for?">
+                </div>
+                <li class="nav__li"><a href="#">Shop</a>
+                    <ul class="nav__ul menu-vertical">
+                        <li class="nav__li"><a href="#">Classic Watches</a></li class="nav__li">
+                        <li class="nav__li"><a href="#">Digital Watches</a></li>
+                        <li class="nav__li"><a href="#">Accesories</a></li>
+                    </ul>
+                </li>
+                <li class="nav__li"><a href="#">My Account<i class="bi bi-person"></i></a>
+                    <ul class="nav__ul menu-vertical">
+                        <li class="nav__li"><a href="#">Order Status</a></li class="nav__li">
+                        <li class="nav__li"><a href="#">Edit profile</a></li>
+                        <li class="nav__li"><a href="#">Log Out</a></li>
+                    </ul>
+                </li>
+                <li class="nav__li"><a href="#">Help center</a></li>
+                <li class="nav__li"><h2 class="ver-carrito" id="vercarrito">🛒<span id="cartQuanty" class="cart-quanty"></span></h2></li>
+            </ul>
+        </ul>
+
+
+
+        <!--<nav class="navbar">
             <div class="container-fluid">
                 <a id="logo" href="#">LuxuWatch</a>
             </div>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn-search" type="submit">Search</button>
-                </form>
+                
             <div class="cart">
-                <h2 class="ver-carrito" id="vercarrito"><i class="bi bi-cart"></i></h2>
+                <h2 class="ver-carrito" id="vercarrito">🛒<span id="cartQuanty" class="cart-quanty"></span></h2>
             </div>
                 <button class="navbar-toggler" type="button"    data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -56,10 +84,13 @@
                    </ul>  
                 </div>
             </div>
-        </nav>
+        </nav>-->
     </header>
 <main>
-      <section>
+    <section class="content">
+        <h2 class="title1">Welcome to LuxuWatch Store</h2>
+    </section>
+    <section>
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -74,14 +105,13 @@
           </div>
         </div>
       </section>
-    <section class="content">
-        <h2 class="title1">Welcome to LuxuWatch Store</h2>
-        <h3 class="title2">Our Products</h3>
-    </section>
 
-    <div id="shopItems" class="shop.items"></div>
+      <h3 class="title2">Our Products</h3>
+
+    <div id="shopItems" class="shop-items"></div>
         
-    <div id="modal-container" class="modal-container"></div>
+    <div id="modal-container" class="modal-container">
+    </div>
 
         <!--<div class="shopping-cart">
             <div class="cart-title">
