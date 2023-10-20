@@ -38,12 +38,14 @@ const pintarCart = () => {
         eliminar.innerText = "X";
         eliminar.className = "delete-item";
         carritoContent.append(eliminar);
+        eliminar.style.cursor = "Pointer"
 
         eliminar.addEventListener("click", eliminarProducto);
     }); 
 
-    const total = carrito.reduce((acc, el) => acc + el.price * el.cantidad, 0);
- 
+    const total = parseInt(carrito.reduce((acc, item) => acc + item.price*item.cantidad, 0));
+    
+
     const totalBuying = document.createElement("div");
         totalBuying.className = "total-content";
         totalBuying.innerHTML = `Order total: ${total} $`;

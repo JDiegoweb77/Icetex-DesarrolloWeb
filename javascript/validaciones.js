@@ -8,6 +8,7 @@ form.addEventListener("submit", e=>{
     let warning = "";
     let entrar = false;
     let regexEmail = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+    
     parrafo.innerHTML = "";    
 
     if(!regexEmail.test(email.value)){
