@@ -127,12 +127,16 @@ form .btn-search {
 }
 
 .form__submit {
-    background: green;
+    background: #E25E3E;
     width: 65%;
     border-radius: 10px;
     height: 40px;
+    color: #d5e2d6;
+    font-weight: 600;
 }
-
+.form__submit:hover {
+    background-color: #DAC0A3;
+}
 .warning {
     width: 500px;
     text-align: center;
@@ -159,17 +163,9 @@ footer {
 
 }
 .footer a:hover {
-    color: greenyellow;
+    color: #FF9B50;
 }
 
-.footer h3 {
-    color: #fff;
-}
-.footer .reserved {
- text-align: center;
- justify-content: center;
- color: #fff;   
-}
 .footer h3 {
     color: #fff;
 }
@@ -190,5 +186,12 @@ footer {
 
 .footer div {
     text-align: center;
+}
+
+
+@media screen and (max-width: 768px) {
+    h2 {
+        color: red;
+    }
 }
 

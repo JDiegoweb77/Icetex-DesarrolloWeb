@@ -45,12 +45,16 @@ const pintarCart = () => {
 
     const total = parseInt(carrito.reduce((acc, item) => acc + item.price*item.cantidad, 0));
     
-
-    const totalBuying = document.createElement("div");
+    const totalBuying = document.createElement("button");
         totalBuying.className = "total-content";
-        totalBuying.innerHTML = `Order total: ${total} $`;
+        totalBuying.innerHTML = `Checkout: ${total} $`;
         modalContainer.append(totalBuying);
 };
+//let btnPay = document.createElement("button");
+  //  btnPay.className = "checkout";
+    //btnPay.innerHTML = `CHECKOUT`;
+
+
 
 verCarrito.addEventListener("click", pintarCart)
 

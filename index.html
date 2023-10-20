@@ -7,32 +7,50 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="javascript/productos.js" defer></script>
+    <script src="javascript/productos-lista.js" defer></script>
+    <script src="javascript/Cart.js" defer></script>
     <title>LuxuWatch | Luxury Watch Store</title>
 </head>
 <body>
       <header>
           <nav class="nav">
-              <div>
-                  <h1>LuxuWatch</h1>
-              </div>
-              <ul class="nav__ul">
-                  <div class="search">
-                      <input type="search">
-                      <i class="bi bi-search"></i>
-                      <input type="submit" value="Search" placeholder="What are you looking for?">
-                  </div>
-                  <li class="nav__li"><a href="#">Shop</a>
-                      <ul class="nav__ul menu-vertical">
-                          <li class="nav__li"><a href="#">Classic Watches</a></li class="nav__li">
-                          <li class="nav__li"><a href="#">Digital Watches</a></li>
-                          <li class="nav__li"><a href="#">Accesories</a></li>
-                      </ul>
-                  </li>
-                  <li class="nav__li"><a href="login.html">Login/Register<i class="bi bi-person"></i></a></li>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="bi bi-list"></i>
+            </label>
+            <div id="logo">
+                <h1>LuxuWatch</h1>
+            </div>
+            <div class="search-label">
+                <input type="search" placeholder="What are you looking for?">
+                <i class="bi bi-search"></i>
+                <input type="submit" value="Search">
+            </div>
+            <ul class="nav__ul">
+              <li class="nav__li"><a href="#">Shop</a>
+                  <ul class="nav__ul menu-vertical">
+                      <li class="nav__li"><a href="#">Classic Watches</a></li class="nav__li">
+                      <li class="nav__li"><a href="#">Digital Watches</a></li>
+                      <li class="nav__li"><a href="#">Accesories</a></li>
+                  </ul>
+                  <li class="nav__li"><a href="login.html ">Login/Register<i class="bi bi-person"></i></a></li>
                   <li class="nav__li"><a href="#">Help center</a></li>
-                  <li class="nav__li"><h2 class="ver-carrito" id="vercarrito">🛒<span id="cartQuanty" class="cart-quanty"></span></h2></li>
-              </ul>
-          </ul>
+            </ul>
+             <h2 class="ver-carrito" id="vercarrito">
+            <span id="cartQuanty" class="cart-quanty"></span> <p>🛒</p>
+          </h2>
+
+          <ul class="nav__responsive-ul">
+            <li class="nav__li"><a href="#">Shop</a>
+                <ul class="nav__ul menu-vertical">
+                    <li class="nav__responsive-li"><a href="#">Classic Watches</a></li>
+                    <li class="nav__responsive-li"><a href="#">Digital Watches</a></li>
+                    <li class="nav__responsive-li"><a href="#">Accesories</a></li>
+                </ul>
+                <li class="nav__li"><a href="login.html ">Login/Register<i class="bi bi-person"></i></a></li>
+                <li class="nav__li"><a href="#">Help center</a></li>
+    </ul>
 
         <!--<nav class="navbar">
             <div class="container-fluid">
@@ -88,8 +106,10 @@
         </section>
         
     <section class="content">
-        <p>Luxury watches are a source of fascination for people around the globe. But what qualifies as a luxury watch? Some may say it's any watch made of expensive materials such as gold or platinum. Others could argue that it has to be a mechanical watch with a handmade movement. Then there are those who define luxury based on legendary brands such as Rolex, Patek Philippe, and Breitling. <br>
-        Whatever it is you're looking for, you will find luxury watches from all the famous brands in every price range on Chrono24. Find and purchase your dream watch now.
+        <p>Luxury watches are a source of fascination for people around the globe. But what qualifies as a luxury watch? Some may say it's any watch made of expensive materials such as gold or platinum. Others could argue that it has to be a mechanical watch with a handmade movement. Then there are those who define luxury based on legendary brands such as Rolex, Patek Philippe, and Breitling.
+        </p>
+        <p>
+          Whatever it is you're looking for, you will find luxury watches from all the famous brands in every price range on Chrono24. Find and purchase your dream watch now.
         </p>
             
         <a href="#" class="btn3">Know more</a>

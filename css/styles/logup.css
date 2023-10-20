@@ -122,10 +122,15 @@ form .btn-search {
 }
 
 .form__submit {
-    background: green;
+    background: #E25E3E;
     width: 65%;
     border-radius: 10px;
     height: 40px;
+    color: #d5e2d6;
+    font-weight: 600;
+}
+.form__submit:hover {
+    background-color: #DAC0A3;
 }
 
 .warnings {
