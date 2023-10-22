@@ -11,40 +11,59 @@ formulario.addEventListener("submit", e=>{
 
     parrafo.innerHTML = "";
     
-    let = warnings = "";
+    let warnings = "";
     let enter = false;
     let regexEmail = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+    const usernameRegax = /^[a-z0_-]{3,16}$/;
+    const nameRegex = /^(?!-)[a-zA-Z-]*[a-zA-Z]$/;
+    const regexPass = /(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8}$/;
 
-console.log((username.value.length <6));
-if(username.value.length <6){
-   warnings += "Invalid username </br>"
+    /*const validarPassword2 = () => {
+        const pass = document.getElementById("password");
+        const inputPassword2 = document.getElementById("password2");
+
+        if(pass.value !== inputPassword2.value){
+
+        }else{
+            warnings += "Password Dont Match </br>"
+        }
+        console.log(pass.value !== inputPassword2.value);
+    }*/
+
+if(usernameRegax.test(username.value)){
+    enter = true;
+}else{
+    warnings += "Invalid Username </br>";
 };
 
-if(firstName.value.length <6){
-    warnings += "Fisrt name too short </br>"
+if(nameRegex.test(firstName.value)){
+    enter = true;
+}else{
+    warnings += "Invalid Name </br>"
 };
 
-if(lastName.value.length <6){
-    warnings += "Last name too short </br>"
+if(nameRegex.test(lastName.value)){
+    enter = true;
+}else{
+    warnings += "Invalid Last Name </br>"
 };
 
 if(regexEmail.test(email.value)){
-    warnings +=  `Invalid email <br>`;
     enter = true;
-};
-
-if(!pass.value.lenght < 8){
-    warnings += `Invalid password <br>`;
-    entrar = true;
-}else {
-    
+}else{
+    warnings +=  `Invalid Email <br>`;
 }
 
-if(entrar){
-    parrafo.innerHTML = warnings
-}else{
-    parrafo.innerHTML = "Complete"
-};
+if(regexPass.test(pass.value)){
+    enter = true;
+}else {
+    warnings += `Invalid Password <br>`;
+}
 
+if(enter){
+    parrafo.innerHTML = "Complete"
+}else{
+    parrafo.innerHTML = warnings
+};
 
 });

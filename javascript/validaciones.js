@@ -8,25 +8,28 @@ form.addEventListener("submit", e=>{
     let warning = "";
     let entrar = false;
     let regexEmail = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
-    const passwordRegex = /(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8}$/;
     
     parrafo.innerHTML = "";    
 
-    if(!regexEmail.test(email.value)){
-        warning +=  `Invalid email <br>`;
+    if(regexEmail.test(email.value)){
         entrar = true;
+    }else{
+        warning +=  `Invalid Email <br>`;
+    };
+
+    const passwordRegex = /(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8}$/;
+    
+    if(passwordRegex.test(pass.value)){
+        entrar = true;
+    }else {
+        warning += `Invalid Password <br>`;
+        console.log(passwordRegex.test(pass.value));
     };
     
-    if(!passwordRegex.test(pass)) {
-        warning += `Invalid password <br>`;
-    }else {
-        entrar = true;
-    }; 
-   
     if(entrar){
-        parrafo.innerHTML = warning;
-    }else{
         parrafo.innerHTML = "Complete";
+    }else{
+        parrafo.innerHTML = warning;
     };
     
 });
