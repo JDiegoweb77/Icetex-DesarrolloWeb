@@ -33,7 +33,6 @@ const pintarCart = () => {
         modalContainer.append(carritoContent);
 
 
-
         let eliminar = document.createElement("span");
         eliminar.innerText = "X";
         eliminar.className = "delete-item";
@@ -65,10 +64,18 @@ const eliminarProducto = () => {
         return carritoId !== foundId;
     });
     carritoCounter();
+    saveLocal();
     pintarCart();
 };
 
 const carritoCounter = () => {
 cartQuanty.style.display = "block";
-cartQuanty .innerText = carrito.length;
+
+const carritoLenght = carrito.length;
+localStorage.setItem("carritoLenght", JSON.stringify(carritoLenght))
+
+cartQuanty .innerText = JSON.parse(localStorage.getItem("carritoLenght"));
+
 };
+
+carritoCounter();

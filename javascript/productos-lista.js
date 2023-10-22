@@ -3,7 +3,7 @@ let verCarrito = document.getElementById("vercarrito");
 const modalContainer = document.getElementById("modal-container");
 const cartQuanty = document.getElementById("cartQuanty");
 
-let carrito = [];
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 shopProducts.forEach((product) => {
     let content = document.createElement("div");
@@ -41,6 +41,11 @@ shopProducts.forEach((product) => {
     };
         console.log(carrito);
         carritoCounter();
+        saveLocal();
     });
 });
+
+const saveLocal = () => {
+localStorage.setItem("carrito", JSON.stringify(carrito));
+};
 
