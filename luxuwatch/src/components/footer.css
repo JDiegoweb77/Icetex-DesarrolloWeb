@@ -1,0 +1,43 @@
+footer {
+    background-color: black;
+}
+
+.footer h2 {
+    color: #fff;
+    align-items: center;
+}
+.footer .info1 {
+    text-align: center;
+    display: list-item;
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+
+}
+.footer a:hover {
+    color: #FF9B50;
+}
+
+.footer h3 {
+    color: #fff;
+}
+.footer .reserved {
+ text-align: center;
+ justify-content: center;
+ color: #fff;   
+}
+.footer p {
+    color: #fff;
+}
+#title1 {
+    color: white;
+}
+.footer .early {
+    text-align: center;
+}
+
+.footer div {
+    text-align: center;
+}
+

@@ -1,0 +1,45 @@
+.contenedor-btn {
+    background-color: white;
+    border-radius: 5px;
+    border-color: rgb(102, 97, 97);
+}
+.contenedor-btn button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#quantity {
+    font-size: 15px;
+    background: #E25E3E;
+    color: #fff;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 8px;
+    border-radius: 10px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.cart-title {
+    cursor: pointer;
+    font-style: italic;
+}
+
+.contenedor-cart {
+    margin-top: 67px;
+    position: fixed;
+    right: 0;
+}
+#eliminarbtn {
+    border-radius: 10px;
+    margin-left: 10px;
+}
+#list {
+    max-height: 250px !important; 
+    overflow-y: auto !important;
+}
+
+.card-img-top {
+    max-width: 300px;
+    
+}

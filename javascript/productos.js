@@ -40,3 +40,15 @@ let shopProducts = [
         cantidad: 1,
     },
 ];
+
+const productActions = {
+    increase: (id, quantity = 1) => {
+        products.find((product) => product.id === id).quantity += quantity;
+    },
+    decrease: (id, quantity = 1) => {
+        if (products.find((product) => product.id === id).quantity === 0) return true;
+        console.log(products.find((product) => product.id === id).quantity)
+        products.find((product) => product.id === id).quantity -= quantity;
+        return false;
+    },
+}

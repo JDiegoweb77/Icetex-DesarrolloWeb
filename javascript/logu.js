@@ -19,6 +19,22 @@ formulario.addEventListener("submit", e=>{
     
     parrafo.innerHTML = "";
 
+    class UI {
+        alertMessage(message, cssClass){
+            const alertMessage = document.createElement("div");
+            alertMessage.className = `alert alert-${cssClass}`;
+            alertMessage.appendChild(document.createTextNode(message));
+        
+            let container = document.querySelector(".form-body");
+            let tableContent = document.querySelector(".form");
+            container.insertBefore(alertMessage, tableContent);
+            setTimeout(function () {
+                document.querySelector(".alert").remove();
+        
+            }, 2000);
+        };
+        }
+
     const validarFormulario = (e) => {
         switch (e.target.name) {
             case "username":

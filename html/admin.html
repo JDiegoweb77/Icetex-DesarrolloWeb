@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles/admin.css">
+    <link rel="stylesheet" href="/css/styles/adm.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="/javascript/admin.js" defer></script>
+    <script src="/javascript/add-products.js" defer></script>
     <title>Admin</title>
 </head>
 <body>
-    <input type="checkbox" id="checkbox">
+    <!--<input type="checkbox" id="checkbox">
     <header class="header">
         <h2 class="dev-name">Dev.<b>Juan Gómez</b>
         <label for="checkbox">
@@ -21,7 +24,7 @@
     </header>
 
     <div class="body">
-        <nav class="side-bar-left">
+        <nav class="side-bar-left body">
             <div class="user-p">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                     <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
@@ -67,6 +70,116 @@
 
             </ul>
         </nav>
+    </div>-->
+    <header>
+        <nav class="navbar fixed-top bg-dark border-bottom border-body" data-bs-theme="dark">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <a class="navbar-brand" href="#">Administracion</a>
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li><a href="">
+                        <i class="bi bi-speedometer2"></i>
+                        <span>Dashboard</span>
+                    </a></li>
+    
+                    <li><a href="">
+                        <i class="bi bi-people-fill"></i>
+                        <span>Users</span>
+                    </a></li>
+    
+                    <li><a href="">
+                        <i class="bi bi-receipt-cutoff"></i>
+                        <span>Sales History</span>
+                    </a></li>
+    
+                    <li><a href="">
+                        <i class="bi bi-clipboard-data"></i>
+                        <span>Analitics</span>
+                    </a></li>
+    
+                    <li><a href="">
+                        <i class="bi bi-chat-right-dots-fill"></i>
+                        <span>Messages</span>
+                    </a></li>
+    
+                    <li><a href="">
+                        <i class="bi bi-gear-fill"></i>
+                        <span>Settings</span>
+                    </a></li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <div class="container">
+        <h2>Inventary</h2>
+
+        <table class="table table-striped" id="table-content">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">ID</th>
+                <th scope="col">Product Img</th>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quanty</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+              <tbody id="items-table">
+                <tr class="product-information" id="table-items">
+                <!--<th id="item1" scope="row">1</th>
+                <td class="product-id">id: 1</td>
+                <td><img src="/assets/imagen4.jpg" alt="Producto 1"       class="img-thumbnail product-image" width="50"></td>
+                <td class="product-name">Producto 1</td>
+                <td class="product-description">Descripción del Producto 1</td>
+                <td class="product-price">$29.99</td>
+                <td class="product-quantity">10</td>
+                <td>
+                 <a href="#" class="btn btn-info btn-sm">Editar</a>
+                 <a href="#" id="eliminarbtn" name="eliminar" class="btn btn-danger btn-sm">Eliminar</a>
+               </td>-->
+             </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <div class="card" style="width: 20rem;">
+          <form action="" id="modalAdd">
+            <div class="card-header">
+              <h4>Add a product</h4>
+            </div>
+            <div class="card-body">
+            <div class="form-group">
+              <label for="itemId" class="form-label">Product Id</label>
+              <input type="number" step="0.01" id="itemId" name="id" label="Id del producto" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="itemName" class="form-label">Product name</label>
+              <input type="text" id="itemName" name="name" label="Nombre del producto" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+              <label for="itemPrice" class="form-label">Product price</label>
+              <input type="number" step="0.01" id="itemPrice" name="price" label="Precio del producto" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+              <label for="itemDescription" class="form-label">Product description</label>
+              <input type="text" id="itemDescription" name="name" label="Descripcion del producto" class="form-control" required>
+            </div>
+            <input type="submit" value="Add Product" class="btn btn-primary btn-block">
+      </form>
     </div>
+  </div>
 </body>
 </html>

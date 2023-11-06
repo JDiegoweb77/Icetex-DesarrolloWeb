@@ -137,8 +137,12 @@ form .btn-search {
     width: 500px;
     text-align: center;
     margin: auto;
-    color: #bb2929;
+    color: #d5e2d6;
     padding-top: 20px;
+    background-color: red;
+    font-weight: 400;
+    border-radius: 5px;
+    
 }
 
 footer {

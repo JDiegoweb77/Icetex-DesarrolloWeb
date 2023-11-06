@@ -5,10 +5,17 @@ const email = document.getElementById("email");
 const pass = document.getElementById("password");
 const formulario = document.getElementById("formulario");
 const parrafo = document.getElementById("warnings");
+const inputs = document.querySelectorAll("#formulario input");
 
 formulario.addEventListener("submit", e=>{
     e.preventDefault()
 
+const validarFormulario = () => {
+    console.log("Los campos son requeridos")
+}
+    inputs.forEach((input) => {
+        input.addEventListener("blur", validarFormulario);
+    });
     parrafo.innerHTML = "";
     
     let warnings = "";
@@ -17,7 +24,7 @@ formulario.addEventListener("submit", e=>{
     const usernameRegax = /^[a-z0_-]{3,16}$/;
     const nameRegex = /^(?!-)[a-zA-Z-]*[a-zA-Z]$/;
     const regexPass = /(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8}$/;
-
+    
     /*const validarPassword2 = () => {
         const pass = document.getElementById("password");
         const inputPassword2 = document.getElementById("password2");

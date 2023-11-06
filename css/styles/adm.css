@@ -1,0 +1,11 @@
+.navbar-toggler {
+    float: left;
+}
+
+#navbarSupportedContent {
+    width: 300px;
+}
+
+.container {
+    margin-top: 60px;
+}
