@@ -7,6 +7,12 @@ import Logup from "./Routes/logup";
 import Login from "./Routes/login";
 
 function App() {
+  const [data, setData] = React.useState(null);
+  React.useEffect(() => {
+    fetch("/")
+    .then((res) => res.json())
+    then((data) => setData(data.message));
+  }, [])
   return (
     <BrowserRouter>
       <Routes>
@@ -20,3 +26,4 @@ function App() {
 }
 
 export default App;
+module.exports = Routes;
